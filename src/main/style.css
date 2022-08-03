@@ -1,0 +1,71 @@
+
+#Main {
+    background: black;
+    width:100%;
+    height:100vh;
+}
+#movie{
+    width:100%;
+    height:50%;
+    background: white;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: black;
+    position: relative;
+}
+#text {
+    position:absolute;
+    color:white;
+    z-index: 10;
+    left:5%;
+    top:10%;
+}
+#text p{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+#text span{
+    font-size: 25px;
+    display: block;
+    width:40%;
+}
+#movie video{
+    position: relative;
+    right:-15%;
+    border-radius: 50%;
+    z-index: 9;
+    width:100%;
+    height:105%;
+}
+#imgdiv img{
+    width:100%;
+    height:100%;
+}
+#imgdiv{
+    margin: 0 auto;
+    width:90%;
+    height:40%;
+}
+.title{
+    color:white;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* swiper css 수정하기 */
+.swiper {height: 100%;
+    margin-right: 50px;}
+
+.swiper-pagination-bullet{
+    background: white !important;
+
+}
+
+
+.swiper-button-next::after {
+    color: white !important;
+}
+
+.swiper-button-prev::after {
+    color: white !important;
+}
