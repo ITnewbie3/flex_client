@@ -1,0 +1,39 @@
+
+
+/* swiper css 수정하기 */
+.swiper { height:50%;
+    margin-right: 50px;
+    overflow: hidden;
+}
+
+.swiper-slide{
+    height:40%;
+}
+.swiper-pagination-bullet{
+    background: white !important;
+}
+
+
+.swiper-button-next::after {
+    color: white !important;
+}
+
+.swiper-button-prev::after {
+    color: white !important;
+}
+
+/* swiper css 수정하기
+.swiper {height: 60%;
+    margin-right: 50px;
+}
+
+.swiper-pagination-bullet{
+    background: white !important;
+}
+.swiper-button-next::after {
+    color: white !important;
+}
+
+.swiper-button-prev::after {
+    color: white !important;
+} */

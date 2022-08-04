@@ -2,23 +2,24 @@
 #Main {
     background: black;
     width:100%;
-    height:100vh;
+    height:200vh;
 }
 #movie{
-    width:100%;
-    height:50%;
+    width:80%;
+    height:30%;
     background: white;
     margin: 0 auto;
     border-radius: 50%;
     background: black;
     position: relative;
+    z-index: 8;
 }
 #text {
     position:absolute;
     color:white;
     z-index: 10;
-    left:5%;
-    top:10%;
+    left:0%;
+    top:20%;
 }
 #text p{
     font-size: 35px;
@@ -37,14 +38,14 @@
     width:100%;
     height:105%;
 }
-#imgdiv img{
+.imgdiv img{
     width:100%;
     height:100%;
 }
-#imgdiv{
+.imgdiv{
     margin: 0 auto;
     width:90%;
-    height:40%;
+    height:50%;
 }
 .title{
     color:white;
@@ -52,20 +53,4 @@
     margin: 20px 0;
 }
 
-/* swiper css 수정하기 */
-.swiper {height: 100%;
-    margin-right: 50px;}
 
-.swiper-pagination-bullet{
-    background: white !important;
-
-}
-
-
-.swiper-button-next::after {
-    color: white !important;
-}
-
-.swiper-button-prev::after {
-    color: white !important;
-}

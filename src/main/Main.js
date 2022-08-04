@@ -1,14 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css'
 import Header from '../include/Header';
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
-import SwiperCore, { Navigation,Mousewheel,EffectCoverflow, Pagination, Autoplay} from "swiper";
+import SwiperCore, { Navigation, Pagination} from "swiper";
 import "swiper/css"; //basic
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Action from './Action';
+import Popularity from './Popularity';
+import Detail from './Detail';
+
 
 
 const Main = () => {
+
+
     return (
         <>
 
@@ -27,50 +33,18 @@ const Main = () => {
                     지원되지 않는 브라우저 입니다.
                     </video>
                 </div>
-                <div id='imgdiv' >
-                <p className='title'> 지금 뜨는 콘텐츠</p>
-                <Swiper
-        spaceBetween={50} //슬라이드 여 백
-      slidesPerView={8} //한 슬라이드에서 보여줄 갯수
-      scrollbar={{ draggable: true }} //슬라이드를 드래그해서 넘길 수 있게 하기
-      pagination={{
-        type: "progressbar",
-      }}
-      navigation={false} //버튼
-      modules={[Pagination, Navigation]}
-      autoplay={{delay: 3000}} //3초마다 자동으로 넘기기
-      loop={true} //무한반복
-      className="mySwiper"
-        >
-             <SwiperSlide>
-                <div className='movediv'>
-                <img src='img/aven3.jpg' alt=''/>
+                {/* 메인 movie */}
+
+
+                <div className='imgdiv' >
+               <p className='title'> 지금 뜨는 콘텐츠</p>
+                <Popularity keyword={'인기'}/>
+                <p className='title'> 액션</p>
+                <Action keywordaction={'액션'}/>
                 </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className='movediv'>
-                <img src='img/aven1.jpg' alt=''/>
                 </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className='movediv'>
-                <img src='img/aven3.jpg' alt=''/>
-                </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className='movediv'>
-                <img src='img/aven2.jpg' alt=''/>
-                </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className='movediv'>
-                <img src='img/aven3.jpg' alt=''/>
-                </div>
-                </SwiperSlide>
-                </Swiper>
-                
-                </div>
-            </div>
+                {/* 메인 영화 이미지 div */}
+           
         </>
     );
 };
