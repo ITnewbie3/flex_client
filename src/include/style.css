@@ -1,15 +1,18 @@
 #header {
     background: black;
     width:100%;
-    height:80px
+    height:80px;
+    max-width:1600px;
+    margin: 0 auto;
 }
 #header img{
     width:100%;
     height:80px;
 }
-a{
+#header a{
     text-decoration: none;
     color:inherit;
+    width:auto;
 }
 #header > ul{
     min-width: 600px;

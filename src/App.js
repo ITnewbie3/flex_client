@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './home/Home';
 import Main from './main/Main';
 import InsertMovie from './insert/InsertMovie';
-import Detail from './main/Detail';
+import Detail from './detail/Detail';
 import Allmovie from './allmovie/Allmovie';
-
+import Bestmovie from './bestmovie/Bestmovie'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Route path='/detail/:id' element={<Detail/>} />
       <Route path='/inser' element={<InsertMovie/>} />
       <Route path='/allmovie' element={<Allmovie/>} />
-      
+      <Route path='/best/:keyword' element={<Bestmovie />} />
       </Routes>
     </div>
   );

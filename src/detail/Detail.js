@@ -1,12 +1,13 @@
-import React, { useEffect, useState, useRef  } from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
-import SwiperCore, { Navigation, Pagination} from "swiper";
+import SwiperCore, { Navigation,Autoplay ,Pagination} from "swiper";
 import { useSelector, useDispatch } from 'react-redux';
 import { getonemovie } from '../modules/movies';
 import { useParams } from 'react-router-dom';
-import './styledetail.css'
 import Header from '../include/Header';
-
+import "swiper/css"; //basic
+import './style.css'
+SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const Detail = () => {
     const {id} = useParams();

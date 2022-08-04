@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Action from './Action';
 import Popularity from './Popularity';
-import Detail from './Detail';
 
 
 
@@ -38,7 +37,7 @@ const Main = () => {
 
                 <div className='imgdiv' >
                <p className='title'> 지금 뜨는 콘텐츠</p>
-                <Popularity keyword={'인기'}/>
+                <Popularity keyword={'드라마'}/>
                 <p className='title'> 액션</p>
                 <Action keywordaction={'액션'}/>
                 </div>
