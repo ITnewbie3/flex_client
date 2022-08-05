@@ -1,12 +1,14 @@
-import React, { useEffect, useState, useRef  } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
-import SwiperCore, { Navigation, Pagination} from "swiper";
+import SwiperCore, { Navigation,Autoplay ,Pagination} from "swiper";
 import { useSelector, useDispatch } from 'react-redux';
 import { getonemovie } from '../modules/movies';
 import { useParams } from 'react-router-dom';
-import './styledetail.css'
 import Header from '../include/Header';
-
+import "swiper/css"; //basic
+import './style.css'
+import axios from 'axios';
+SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const Detail = () => {
     const {id} = useParams();
@@ -15,15 +17,49 @@ const Detail = () => {
    useEffect(()=>{
        dispatch(getonemovie(id))
    },[dispatch, id])
-   console.log(data)
+   
+   const [formData, setFormData] = useState({
+    id:"",
+    name:""
+   })
+
+   function inserfavorites(){
+    axios.post('http://localhost:3001/favorites',formData)
+    .then(result=>{
+        console.log(result);
+
+    })
+    .catch(e=>{
+        console.log(e);
+    })
+}
+
+   useEffect(() => {
+    setFormData({
+        id: (sessionStorage.getItem('user_id') ? sessionStorage.getItem('user_id') : ""),
+        name: (data ? data[0].name : "")
+    })
+   },[data])
+   
    if(loading) return <div>로딩중입니다.</div>
    if(error) return <div>에러..</div>
    if(!data) return null
+ 
+   const onSubmit = (e)=>{
+    e.preventDefault();
+    console.log(formData.id);
+    inserfavorites();
+    document.location.href = `/favorite/${sessionStorage.getItem('user_id')}`
+}
     return (
         <>
            
              <div id='blindbox'>
              <Header/>
+             { (sessionStorage.getItem("user_id") && !sessionStorage.getItem("view")) ?
+             <form onSubmit={onSubmit}>
+            <button className='btn' type='submit' >찜하기</button> 
+            </form> : ""}
             <div id='detailimg'>
             <Swiper
                 slidesPerView={1} 
@@ -69,8 +105,9 @@ const Detail = () => {
                 </tr>
              </table>
              </div>
+             </div>
             </div>
-       </div>
+    
         </>
     );
 };

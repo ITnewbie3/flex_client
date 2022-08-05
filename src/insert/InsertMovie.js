@@ -60,7 +60,7 @@ const InsertMovie = () => {
         .then(result=>{
             console.log(result);
             alert('영화등록완료되었습니다.')
-
+            document.location.href = '/main'
         })
         .catch(e=>{
             console.log(e);

@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './style.css'
 import Header from '../include/Header';
-import { Swiper, SwiperSlide } from "swiper/react"; // basic
-import SwiperCore, { Navigation, Pagination} from "swiper";
 import "swiper/css"; //basic
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Action from './Action';
 import Popularity from './Popularity';
-import Detail from './Detail';
+import Login from './Login';
+
 
 
 
 const Main = () => {
-
-
+    console.log(sessionStorage.getItem("view"))
     return (
         <>
 
             <Header/>
             <div id='Main'>
+                
+            { (!sessionStorage.getItem("user_id") && !sessionStorage.getItem("view")) ? <Login />  : ""}
+                
                 <div id='movie'>
                     <div id='text'>
                 <p>쥬라기 월드:도미니언</p>
@@ -38,7 +39,7 @@ const Main = () => {
 
                 <div className='imgdiv' >
                <p className='title'> 지금 뜨는 콘텐츠</p>
-                <Popularity keyword={'인기'}/>
+                <Popularity keyword={'드라마'}/>
                 <p className='title'> 액션</p>
                 <Action keywordaction={'액션'}/>
                 </div>

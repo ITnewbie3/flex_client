@@ -32,7 +32,6 @@ const Popularity = ({keyword}) => {
    }}
    navigation={false} //버튼
    modules={[Pagination, Navigation]}
-   autoplay={{delay: 3000}} //3초마다 자동으로 넘기기
    loop={true} //무한반복
    className="mySwiper"
      >

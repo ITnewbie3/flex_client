@@ -1,8 +1,9 @@
-
 #Main {
     background: black;
     width:100%;
     height:200vh;
+    margin: 0 auto;
+    max-width: 1600px;
 }
 #movie{
     width:80%;
@@ -54,3 +55,61 @@
 }
 
 
+/* 로그인 창 */
+#bgbox.off{
+    display: none;
+}
+#bgbox{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0,0,0.5);
+    z-index: 11;
+}
+#loginbox{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:30%;
+    height:50%;
+    z-index: 11;
+    text-align: center;
+    padding-top: 90px;
+    min-width: 540px;
+}
+#loginbox p{
+    color:white;
+    font-size: 50px;
+}
+#loginbox table{
+    margin: 0 auto;
+    width:60%;
+}
+#loginbox td{
+    font-size: 30px;
+    padding: 20px;
+    color:white;
+}
+#loginbox input{
+    width:100%;
+    line-height: 30px;
+}
+
+#loginbox button{
+    padding: 15px;
+    margin-right: 20px;
+    width:25%;
+    cursor: pointer;
+    background: none;
+    background: honeydew;
+    border-radius: 50%;
+
+}
+
+#loginbox a{
+    text-decoration: none;
+}

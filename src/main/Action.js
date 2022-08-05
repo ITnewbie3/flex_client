@@ -22,7 +22,6 @@ const Action = ({keywordaction}) => {
       if(loading) return <div>로딩중입니다.</div>
       if(error) return <div>에러..</div>
       if(!dataa) return null
-      console.log(dataa);
       return (
         <>
              <Swiper
@@ -34,7 +33,6 @@ const Action = ({keywordaction}) => {
       }}
       navigation={false} //버튼
       modules={[Pagination, Navigation]}
-      autoplay={{delay: 3000}} //3초마다 자동으로 넘기기
       loop={true} //무한반복
       className="mySwiper"
         >
