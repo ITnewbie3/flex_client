@@ -35,3 +35,31 @@
 .swiper-button-prev::after {
     color: white !important;
 }
+
+@media all and (max-width: 768px){
+
+    .swiper { height:20%;
+        width:100%;
+        overflow: hidden;
+    }
+    .imgdiv img{
+        height:250px;
+    }
+    
+    .swiper-slide{
+        height:100%;
+    }
+}
+@media all and (max-width: 420px){
+    .swiper { height:20%;
+        width:100%;
+        overflow: hidden;
+    }
+    .imgdiv img{
+        height:190px;
+    }
+    
+    .swiper-slide{
+        height:100%;
+    }
+}

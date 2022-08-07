@@ -34,4 +34,19 @@
     width:80%;
     line-height: 40px;
 }
+#insertform table button{
+    padding: 5px;
+    margin-right: 10px;
+}
 
+
+@media all and (max-width: 768px){
+    #insertform table th{
+        font-size:15px;
+    }
+    #insertform table button{
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+}

@@ -32,12 +32,29 @@
 }
 #contanior button{
     position: absolute;
-    right:0;
+    left:50%;
+    bottom:0%;
     width:6%;
     height:10%;
     font-size: 35px;
     border: none;
     cursor: pointer;
-    background: #ccc;
     color:red;
+    background: none;
+}
+
+@media all and (max-width: 768px){
+    #contanior{
+    width:100%;
+    }
+    .ftextdiv h1{
+        font-size: 23px;
+    }
+    .ftextdiv p {
+        font-size: 13px;
+    }
+    #contanior button{
+        left:50%;
+        bottom:0%
+    }
 }

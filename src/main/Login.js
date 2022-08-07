@@ -58,15 +58,15 @@ const onSubmit =(e)=>{
             <form onSubmit={onSubmit}>
             <table>
                 <tr>
-                    <td>ID : </td>
+                    <th>ID : </th>
                     <td><input type='text' name='id' onChange={onChange}/></td>
                 </tr>
                 <tr>
-                    <td>PW : </td>
+                    <th>PW : </th>
                     <td><input type='password' name='pw' onChange={onChange}/></td>
                 </tr>
                 <tr>
-                    <td colSpan={2}>
+                    <td colSpan={2} className='loginbtn'>
                         <button type='submit'>로그인</button>
                       <Link to='/join'>  <button>회원가입</button></Link>
                         <button onClick={onView}>구경하기</button>

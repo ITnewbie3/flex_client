@@ -56,10 +56,7 @@ const Detail = () => {
            
              <div id='blindbox'>
              <Header/>
-             { (sessionStorage.getItem("user_id") && !sessionStorage.getItem("view")) ?
-             <form onSubmit={onSubmit}>
-            <button className='btn' type='submit' >찜하기</button> 
-            </form> : ""}
+
             <div id='detailimg'>
             <Swiper
                 slidesPerView={1} 
@@ -102,6 +99,14 @@ const Detail = () => {
                 <tr>
                     <th>줄거리</th>
                     <td>{data[0].desc}</td>
+                </tr>
+                <tr>
+                    <td colSpan={2}>
+                    { (sessionStorage.getItem("user_id") && !sessionStorage.getItem("view")) ?
+             <form onSubmit={onSubmit}>
+            <button className='btn' type='submit' >찜하기</button> 
+            </form> : ""}
+                    </td>
                 </tr>
              </table>
              </div>

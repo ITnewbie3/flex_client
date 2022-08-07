@@ -20,7 +20,7 @@ const Favorites = () => {
         axios.post(`http://localhost:3001/delfavorites/${no}`)
         .then(result=>{
             console.log(result);
-            // document.location.href = document.location.href
+            document.location.href = document.location.href
         })
         .catch(e=>{
             console.log(e);

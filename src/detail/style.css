@@ -9,14 +9,12 @@ max-width: 1600px;
 }
 
 .btn{
-    position: absolute;
-    color:black;
+    margin-top: 20px;
+    color:white;
     font-size: 20px;
-    right:5%;
-    top:10%;
     padding: 15px;
-    border-radius: 50%;
-    background: deepskyblue;
+    background: none;
+    border: 1px solid white;
     cursor: pointer;
 }
 
@@ -79,4 +77,18 @@ max-width: 1600px;
 
 #detailimg .swiper-button-prev::after {
     color: white !important;
+}
+
+
+@media all and (max-width: 768px){
+    #detailimg{
+    flex-wrap: wrap;
+    }
+
+    .detailtext th{
+        font-size: 15px;
+    }
+    .detailtext td{
+        font-size: 13px;
+    }
 }

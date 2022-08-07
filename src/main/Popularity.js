@@ -30,6 +30,20 @@ const Popularity = ({keyword}) => {
    pagination={{
      type: "progressbar",
    }}
+   breakpoints={{
+    390: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+  }}
    navigation={false} //버튼
    modules={[Pagination, Navigation]}
    loop={true} //무한반복
