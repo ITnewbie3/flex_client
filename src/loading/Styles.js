@@ -11,6 +11,7 @@ export const Background = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #000;
 `;
 
 export const LoadingText = styled.div`
