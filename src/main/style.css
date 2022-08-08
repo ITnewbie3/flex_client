@@ -101,9 +101,15 @@
     padding-top: 230px;
     min-width: 540px;
 }
+#loginbox img{
+    width:80%;
+    height:80%;
+    margin-bottom: 40px;
+}
 #loginbox p{
+    text-align: center;
     color:white;
-    font-size: 50px;
+    font-size: 12px;
     margin-bottom: 30px;
 }
 #loginbox table{
@@ -125,6 +131,9 @@ padding-bottom: 30px;
     margin-left: 15px;
     width:50%;
     line-height: 30px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
 }
 
 #loginbox button{
@@ -136,6 +145,7 @@ padding-bottom: 30px;
     background: none;
     color: white;
     font-weight: bold;
+    border: 0.5px solid white;
 }
 #loginbox .loginbtn{
     text-align: center;
@@ -145,7 +155,7 @@ padding-bottom: 30px;
     text-decoration: none;
 }
 
-@media all and (max-width: 1024px){
+@media all and (max-width: 1080px){
     #movie video{
         display: none;
      }
@@ -153,9 +163,13 @@ padding-bottom: 30px;
          display: block;
      }
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 660px){
     #loginbox p{
-        font-size: 35px;
+        font-size: 12px;
+    }
+    #loginbox img{
+        width:40%;
+        height:30%;
     }
     #bgbox{
         width:100%;

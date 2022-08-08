@@ -55,7 +55,7 @@ const onSubmit =(e)=>{
     return (
         <div id='bgbox'>
         <div id='loginbox'>
-            <p>로그인 하시면 <br/>찜하기가 가능합니다.</p>
+            <img src='/img/logo.gif'/>
             <form onSubmit={onSubmit}>
             <table>
                 <tr>
@@ -73,8 +73,10 @@ const onSubmit =(e)=>{
                         <button onClick={onView}>구경하기</button>
                     </td>
                 </tr>
+        
             </table>
             </form>
+            <p>로그인 하시면 찜하기가 가능합니다.</p>
         </div>
     </div>
     );
