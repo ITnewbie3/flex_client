@@ -1,3 +1,21 @@
+
+@media all and (max-width: 768px){
+    #contanior{
+    width:100%;
+    }
+    .ftextdiv h1{
+        font-size: 23px;
+    }
+    .ftextdiv p {
+        font-size: 13px;
+    }
+    #contanior button{
+        left:50%;
+        bottom:0%
+    }
+}
+
+
 #favorites{ animation: 1.5s ease-in-out loadEffect1; }
 
 @keyframes loadEffect1 {
@@ -51,20 +69,4 @@
     cursor: pointer;
     color:red;
     background: none;
-}
-
-@media all and (max-width: 768px){
-    #contanior{
-    width:100%;
-    }
-    .ftextdiv h1{
-        font-size: 23px;
-    }
-    .ftextdiv p {
-        font-size: 13px;
-    }
-    #contanior button{
-        left:50%;
-        bottom:0%
-    }
 }

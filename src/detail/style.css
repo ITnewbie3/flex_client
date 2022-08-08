@@ -1,3 +1,18 @@
+
+@media all and (max-width: 768px){
+    #detailimg{
+    flex-wrap: wrap;
+    }
+
+    .detailtext th{
+        font-size: 15px;
+    }
+    .detailtext td{
+        font-size: 13px;
+    }
+}
+
+
 #blindbox{ animation: 1.5s ease-in-out loadEffect1; }
 
 @keyframes loadEffect1 {
@@ -89,16 +104,3 @@ max-width: 1600px;
     color: white !important;
 }
 
-
-@media all and (max-width: 768px){
-    #detailimg{
-    flex-wrap: wrap;
-    }
-
-    .detailtext th{
-        font-size: 15px;
-    }
-    .detailtext td{
-        font-size: 13px;
-    }
-}

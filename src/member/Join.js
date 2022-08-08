@@ -55,7 +55,7 @@ const Join = () => {
                     <td><input type='text' required onChange={onChange} name='id'/></td>
                 </tr>                <tr>
                     <th>PASSWORD *</th>
-                    <td><input type='text' required onChange={onChange} name='pw'/></td>
+                    <td><input type='password' required onChange={onChange} name='pw'/></td>
                 </tr>                <tr>
                     <th>name</th>
                     <td><input type='text' onChange={onChange} name='name'/></td>

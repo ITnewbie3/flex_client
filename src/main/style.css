@@ -1,3 +1,47 @@
+
+@media all and (max-width: 1080px){
+    #movie video{
+        display: none;
+     }
+     #mainimg{
+         display: block;
+     }
+}
+@media all and (max-width: 660px){
+    #loginbox p{
+        font-size: 12px;
+    }
+    #loginbox img{
+        width:40%;
+        height:30%;
+    }
+    #bgbox{
+        width:100%;
+        height:200vh;
+    }
+    #movie{
+     left:0%;
+     height:20%;
+
+    }
+    #text span {
+     display: none;
+    }
+    #movie video{
+       display: none;
+    }
+    #mainimg{
+        display: block;
+    }
+    #text {
+
+     top:20%;   
+       }
+    #text p{
+        font-size: 30px;
+    }
+}
+
 #Main{ animation: 1.5s ease-in-out loadEffect1; }
 
 @keyframes loadEffect1 {
@@ -153,47 +197,4 @@ padding-bottom: 30px;
 
 #loginbox a{
     text-decoration: none;
-}
-
-@media all and (max-width: 1080px){
-    #movie video{
-        display: none;
-     }
-     #mainimg{
-         display: block;
-     }
-}
-@media all and (max-width: 660px){
-    #loginbox p{
-        font-size: 12px;
-    }
-    #loginbox img{
-        width:40%;
-        height:30%;
-    }
-    #bgbox{
-        width:100%;
-        height:200vh;
-    }
-    #movie{
-     left:0%;
-     height:20%;
-
-    }
-    #text span {
-     display: none;
-    }
-    #movie video{
-       display: none;
-    }
-    #mainimg{
-        display: block;
-    }
-    #text {
-
-     top:20%;   
-       }
-    #text p{
-        font-size: 30px;
-    }
 }
