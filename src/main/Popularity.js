@@ -32,7 +32,7 @@ const Popularity = ({keyword}) => {
      type: "progressbar",
    }}
    breakpoints={{
-    390: {
+    300: {
       slidesPerView: 3,
       spaceBetween: 30,
     },
