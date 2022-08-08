@@ -27,6 +27,10 @@
     opacity: 0;
     transition: 2s;
 }
+.home p img{
+    width:50%;
+    height:50%;
+}
 .home.on p {
     left:80%;
     opacity: 1;
