@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { API_URL } from '../config/amuguna';
 import './style.css'
 
 const Login = () => {
@@ -17,7 +18,7 @@ const onChange = (e) => {
     })
 }
 function login(){
-    axios.post('http://localhost:3001/member',formData)
+    axios.post(`${API_URL}/member`,formData)
     .then(result=>{
         const {id, pw} = result.data
         if(result.data.id === undefined){

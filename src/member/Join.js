@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { API_URL } from '../config/amuguna';
 import Header from '../include/Header';
 import './style.css'
 
@@ -23,7 +24,7 @@ const Join = () => {
 
 
     function insertMember(){
-        axios.post('http://localhost:3001/addmember',formData)
+        axios.post(`${API_URL}/addmember`,formData)
         .then(result=>{
             console.log(result);
             alert('회원등록완료.')

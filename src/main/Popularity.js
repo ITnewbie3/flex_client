@@ -9,6 +9,7 @@ import "swiper/css"; //basic
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './styleaction.css'
+import { API_URL } from '../config/amuguna';
 
 const Popularity = ({keyword}) => {
    // 값 받아오기(keyword)
@@ -53,7 +54,7 @@ const Popularity = ({keyword}) => {
           <SwiperSlide>
              <Link to={`/detail/${movie.no}`}>
              <div className='movediv'>
-             <img src={`http://localhost:3001/img/${movie.img[0]}`} alt=''/>
+             <img src={`${API_URL}}/img/${movie.img[0]}`} alt=''/>
              </div>
              </Link>
              </SwiperSlide>

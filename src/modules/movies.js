@@ -1,5 +1,6 @@
 
 import axios from "axios";
+import { API_URL } from "../config/amuguna";
 
 //초기값 지정
 const initialState = {
@@ -53,7 +54,7 @@ const GET_ONEMOVIE_ERROR = "GET_ONEMOVIE_ACTION_ERROR";
 export const getonemovie = (id) => async dispatch => {
     dispatch({type:GET_ONEMOVIE})
     try{
-        const response2 = await axios.get(`http://localhost:3001/detail/${id}`)
+        const response2 = await axios.get(`${API_URL}/detail/${id}`)
         const result2 = response2.data;
         dispatch({type:GET_ONEMOVIE_SUCCESS,result2})
     }
@@ -65,7 +66,7 @@ export const getonemovie = (id) => async dispatch => {
 export const getmovie = (keyword) => async dispatch => {
     dispatch({type:GET_MOVIE})
     try{
-        const response = await axios.get(`http://localhost:3001/movie/${keyword}`)
+        const response = await axios.get(`${API_URL}/movie/${keyword}`)
         const result = response.data;
         dispatch({type:GET_MOVIE_SUCCESS,result})
     }
@@ -78,7 +79,7 @@ export const getmovieaction = (keywordaction) => async dispatch => {
     dispatch({type:GET_MOVIE_ACTION})
     try{
         console.log(keywordaction);
-        const response1 = await axios.get(`http://localhost:3001/movieaction/${keywordaction}`)
+        const response1 = await axios.get(`${API_URL}/movieaction/${keywordaction}`)
         const result1 = response1.data;
         dispatch({type:GET_MOVIE_ACTION_SUCCESS,result1})
     }
@@ -91,7 +92,7 @@ export const getmovieaction = (keywordaction) => async dispatch => {
 export const getmovies = () => async dispatch => {
     dispatch({type:GET_MOVIES})
     try{
-        const res = await axios.get(`http://localhost:3001/movies`)
+        const res = await axios.get(`${API_URL}/movies`)
         const result = res.data;
         dispatch({type:GET_MOVIES_SUCCESS,result})
     }

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_URL } from "../config/amuguna";
 
 const initialState = {
     favorit:{
@@ -16,7 +17,7 @@ const GET_FAVORIT_ERROR ="GET_FAVORIT_ERROR"
 export const getfavorit = (id) => async dispatch => {
     dispatch({type:GET_FAVORIT})
     try{
-        const response = await axios.get(`http://localhost:3001/favorit/${id}`)
+        const response = await axios.get(`${API_URL}/favorit/${id}`)
         console.log(response)
         const result = response.data;
         dispatch({type:GET_FAVORIT_SUCCESS,result})

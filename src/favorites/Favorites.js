@@ -5,6 +5,7 @@ import './style.css'
 import { getfavorit } from '../modules/favorit';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../config/amuguna';
 
 
 const Favorites = () => {
@@ -17,7 +18,7 @@ const Favorites = () => {
 
 
     function delfavorites(no){
-        axios.post(`http://localhost:3001/delfavorites/${no}`)
+        axios.post(`${API_URL}/delfavorites/${no}`)
         .then(result=>{
             console.log(result);
             document.location.href = document.location.href
@@ -43,7 +44,7 @@ const Favorites = () => {
             {data.map(data => (
             <div id='contanior'>
                 <div className='fimgdiv'>
-                    <img src={`http://localhost:3001/img/${data.img[0]}`}></img>
+                    <img src={`${API_URL}/img/${data.img[0]}`}></img>
                 </div>
                 <div className='ftextdiv'>
                     <h1>{data.name}</h1>

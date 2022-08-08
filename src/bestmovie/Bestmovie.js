@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './style.css'
 import Header from '../include/Header';
 import Loading from '../loading/Loading';
+import { API_URL } from '../config/amuguna';
 
 const Bestmovie = () => {
     const params = useParams();
@@ -27,7 +28,7 @@ const Bestmovie = () => {
             {data.map(movie =>( 
 
                  <Link to={`/detail/${movie.no}`}><div className='movediv'>
-                 <img src={`http://localhost:3001/img/${movie.img[0]}`} alt=''/>
+                 <img src={`${API_URL}/img/${movie.img[0]}`} alt=''/>
                 </div> 
                 </Link>           ))}
                 </div>

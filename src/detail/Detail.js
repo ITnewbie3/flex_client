@@ -8,6 +8,7 @@ import Header from '../include/Header';
 import "swiper/css"; //basic
 import './style.css'
 import axios from 'axios';
+import { API_URL } from '../config/amuguna';
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const Detail = () => {
@@ -24,7 +25,7 @@ const Detail = () => {
    })
 
    function inserfavorites(){
-    axios.post('http://localhost:3001/favorites',formData)
+    axios.post(`${API_URL}/favorites`,formData)
     .then(result=>{
         console.log(result);
 
@@ -71,10 +72,10 @@ const Detail = () => {
                   className="mySwiper"
                   >
              <SwiperSlide>
-             <img src={`http://localhost:3001/img/${data[0].img[0]}`} alt=''/>
+             <img src={`${API_URL}/img/${data[0].img[0]}`} alt=''/>
              </SwiperSlide>
              <SwiperSlide>
-             <img src={`http://localhost:3001/img/${data[0].img[1]}`} alt=''/>
+             <img src={`${API_URL}/img/${data[0].img[1]}`} alt=''/>
                 </SwiperSlide>
                 </Swiper>
                 <div className='detailtext'>

@@ -3,6 +3,7 @@ import Header from '../include/Header';
 import './style.css'
 import axios from 'axios';
 import { BackTop, Form, Divider, Input, InputNumber, Button, Upload } from 'antd';
+import { API_URL } from '../config/amuguna';
 
 const InsertMovie = () => {
     const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ const InsertMovie = () => {
     }
     
     function insertMovie(){
-        axios.post('http://localhost:3001/addmovie',formData)
+        axios.post(`${API_URL}/addmovie`,formData)
         .then(result=>{
             console.log(result);
             alert('영화등록완료되었습니다.')
@@ -110,7 +111,7 @@ const InsertMovie = () => {
                 label={<div className='upload-label'></div>}>  
                     <Upload id='poto' onChange={onChangeImg2} 
                     listType="picture" showUploadList={false} name="image" 
-                    action={'http://localhost:3001/upload'} multiple> 
+                    action={`${API_URL}/upload`} multiple> 
                         <div id='upload_img'>
                             <img src='./image/camera.png' alt=''></img>
                             <span>이미지를 업로드 해주세요.</span>

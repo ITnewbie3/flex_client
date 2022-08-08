@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './styleaction.css'
 import Loading from '../loading/Loading';
+import { API_URL } from '../config/amuguna';
 
 const Action = ({keywordaction}) => {
       // 값 받아오기(keyword)
@@ -57,7 +58,7 @@ const Action = ({keywordaction}) => {
              <SwiperSlide>
             
                  <Link to={`/detail/${movieaction.no}`}><div className='movediv'>
-                 <img src={`http://localhost:3001/img/${movieaction.img[0]}`} alt=''/>
+                 <img src={`${API_URL}/img/${movieaction.img[0]}`} alt=''/>
                
                 </div> 
                 </Link>
