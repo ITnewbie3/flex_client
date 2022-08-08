@@ -145,7 +145,14 @@ padding-bottom: 30px;
     text-decoration: none;
 }
 
-
+@media all and (max-width: 1024px){
+    #movie video{
+        display: none;
+     }
+     #mainimg{
+         display: block;
+     }
+}
 @media all and (max-width: 768px){
     #loginbox p{
         font-size: 35px;
