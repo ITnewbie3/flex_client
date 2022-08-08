@@ -54,7 +54,7 @@ const Popularity = ({keyword}) => {
           <SwiperSlide>
              <Link to={`/detail/${movie.no}`}>
              <div className='movediv'>
-             <img src={`${API_URL}}/img/${movie.img[0]}`} alt=''/>
+             <img src={`${API_URL}/img/${movie.img[0]}`} alt=''/>
              </div>
              </Link>
              </SwiperSlide>

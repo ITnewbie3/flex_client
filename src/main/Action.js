@@ -41,10 +41,6 @@ const Action = ({keywordaction}) => {
         640: {
           slidesPerView: 3,
           spaceBetween: 30,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30,
         }
       }}
       navigation={false} //버튼
