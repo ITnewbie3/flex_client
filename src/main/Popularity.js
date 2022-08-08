@@ -40,9 +40,9 @@ const Popularity = ({keyword}) => {
       slidesPerView: 3,
       spaceBetween: 30,
     },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
     }
   }}
    navigation={false} //버튼
