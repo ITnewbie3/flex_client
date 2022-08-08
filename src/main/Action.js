@@ -46,7 +46,7 @@ const Action = ({keywordaction}) => {
           slidesPerView: 3,
           spaceBetween: 30,
         },
-        1024: {
+        1280: {
           slidesPerView: 5,
           spaceBetween: 50,
         }

@@ -92,7 +92,7 @@ export const getmovieaction = (keywordaction) => async dispatch => {
 export const getmovies = () => async dispatch => {
     dispatch({type:GET_MOVIES})
     try{
-        const res = await axios.get(`${API_URL}/movies`)
+        const res = await axios.get(`${API_URL} /movies`)
         const result = res.data;
         dispatch({type:GET_MOVIES_SUCCESS,result})
     }
