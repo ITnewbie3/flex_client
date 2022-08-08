@@ -44,7 +44,9 @@ const Favorites = () => {
             {data.map(data => (
             <div id='contanior'>
                 <div className='fimgdiv'>
+                <Link to={`/detail/${data.num}`}>
                     <img src={`${API_URL}/img/${data.img[0]}`}></img>
+                    </Link>
                 </div>
                 <div className='ftextdiv'>
                     <h1>{data.name}</h1>
