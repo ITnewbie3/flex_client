@@ -1,53 +1,5 @@
 
-@media all and (max-width: 1024px){
-    #header img{
-        width:100%;
-        height:80px;
-    }
-    #header > ul{
-        min-width: 390px;
-        padding-top: 25px;
-        line-height: 90px;
-        width:100%;
-        font-size: 20px;
-        text-align: center;
-    }
-    #header li {
-        width:25%;
-    }
-    #header a {
-        width:25%;
-    }
-    #header a li{
-        width:100%;
-    }
-}
 
-
-@media all and (max-width: 768px){
-    #header img{
-        width:100%;
-        height:80px;
-    }
-    #header > ul{
-        min-width: 390px;
-        padding-top: 25px;
-        line-height: 90px;
-        width:100%;
-        font-size: 10px;
-        text-align: center;
-    }
-    #header li {
-        width:25%;
-    }
-    #header a {
-        width:25%;
-    }
-    #header a li{
-        width:100%;
-    }
-
-}
 
 
 #header {
@@ -80,4 +32,54 @@
 #header li {
     list-style: none;
     cursor: pointer;
+}
+
+@media all and (max-width: 1024px){
+    #header img{
+        width:100%;
+        height:80px;
+    }
+    #header > ul{
+        min-width: 390px;
+        padding-top: 25px;
+        line-height: 90px;
+        width:100%;
+        font-size: 20px;
+        text-align: center;
+    }
+    #header li {
+        width:25%;
+    }
+    #header a {
+        width:25%;
+    }
+    #header a li{
+        width:100%;
+    }
+}
+
+
+@media all and (max-width: 660px){
+    #header img{
+        width:100%;
+        height:80px;
+    }
+    #header > ul{
+        min-width: 390px;
+        padding-top: 25px;
+        line-height: 90px;
+        width:100%;
+        font-size: 10px;
+        text-align: center;
+    }
+    #header li {
+        width:25%;
+    }
+    #header a {
+        width:25%;
+    }
+    #header a li{
+        width:100%;
+    }
+
 }

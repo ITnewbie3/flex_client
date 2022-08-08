@@ -1,31 +1,4 @@
 
-@media all and (max-width: 768px){
-
-    .swiper { height:35%;
-        width:100%;
-        overflow: hidden;
-    }
-    .imgdiv img{
-        height:250px;
-    }
-    
-    .swiper-slide{
-        height:100%;
-    }
-}
-@media all and (max-width: 420px){
-    .swiper { height:30%;
-        width:100%;
-        overflow: hidden;
-    }
-    .imgdiv img{
-        height:190px;
-    }
-    
-    .swiper-slide{
-        height:100%;
-    }
-}
 
 
 /* swiper css 수정하기 */
@@ -64,3 +37,32 @@
     color: white !important;
 }
 
+
+
+@media all and (max-width: 768px){
+
+    .swiper { height:35%;
+        width:100%;
+        overflow: hidden;
+    }
+    .imgdiv img{
+        height:250px;
+    }
+    
+    .swiper-slide{
+        height:100%;
+    }
+}
+@media all and (max-width: 420px){
+    .swiper { height:30%;
+        width:100%;
+        overflow: hidden;
+    }
+    .imgdiv img{
+        height:190px;
+    }
+    
+    .swiper-slide{
+        height:100%;
+    }
+}

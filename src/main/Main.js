@@ -38,8 +38,7 @@ const Main = () => {
                     지구의 최상위 포식자 자리를 걸고 인간과 공룡의 최후의 사투가 펼쳐진다.</span>
                     </div>
                     <img src='/img/juragi.jpg' id='mainimg'/>
-                    <video autoPlay muted playsinline>
-                    <source src='img/mov.mov' type='video/mp4' />
+                    <video autoPlay muted playsinline src='img/mov.mov' type='video/mp4'>
                     지원되지 않는 브라우저 입니다.
                     </video>
                 </div>
