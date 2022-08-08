@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Header from '../include/Header';
 import './style.css'
+import Loading from '../loading/Loading';
 
 const Allmovie = () => {
       const { data, loading, error } = useSelector(state => state.searchmovies.movies);
@@ -14,7 +15,7 @@ const Allmovie = () => {
       },[dispatch])
 
 
-      if(loading) return <div>로딩중입니다.</div>
+      if(loading) return <Loading/>
       if(error) return <div>에러..</div>
       if(!data) return null
       console.log(data)

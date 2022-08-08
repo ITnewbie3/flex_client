@@ -7,15 +7,23 @@ import "swiper/css/navigation";
 import Action from './Action';
 import Popularity from './Popularity';
 import Login from './Login';
+import Loading from '../loading/Loading';
 
 
 
 
 const Main = () => {
-    console.log(sessionStorage.getItem("view"))
+    const [isloading, setIsLoading] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setIsLoading(false);
+        }, 1500);
+        return () => clearTimeout(timer);
+      }, []); // 2초 후 로딩완료
     return (
         <>
-
+            {isloading ?  <Loading/> : 
+            <>
             <Header/>
             <div id='Main'>
                 
@@ -44,6 +52,8 @@ const Main = () => {
                 <Action keywordaction={'액션'}/>
                 </div>
                 </div>
+                </>
+                }
                 {/* 메인 영화 이미지 div */}
            
         </>

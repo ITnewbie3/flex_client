@@ -5,6 +5,7 @@ import { getmovie } from '../modules/movies';
 import { Link } from 'react-router-dom';
 import './style.css'
 import Header from '../include/Header';
+import Loading from '../loading/Loading';
 
 const Bestmovie = () => {
     const params = useParams();
@@ -15,7 +16,7 @@ const Bestmovie = () => {
        dispatch(getmovie(key))
    },[dispatch, key])
 
-   if(loading) return <div>로딩중입니다.</div>
+   if(loading) return <Loading/>
    if(error) return <div>에러..</div>
    if(!data) return null
     return (

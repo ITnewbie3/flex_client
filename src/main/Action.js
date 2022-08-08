@@ -9,6 +9,7 @@ import "swiper/css"; //basic
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './styleaction.css'
+import Loading from '../loading/Loading';
 
 const Action = ({keywordaction}) => {
       // 값 받아오기(keyword)
@@ -19,7 +20,7 @@ const Action = ({keywordaction}) => {
       },[dispatch, keywordaction])
 
 
-      if(loading) return <div>로딩중입니다.</div>
+      if(loading) return <Loading/>
       if(error) return <div>에러..</div>
       if(!dataa) return null
       return (

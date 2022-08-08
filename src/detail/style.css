@@ -1,7 +1,17 @@
+#blindbox{ animation: 1.5s ease-in-out loadEffect1; }
 
+@keyframes loadEffect1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 #blindbox{
 width:100%;
+min-height: 100vh;
 max-width: 1600px;
     background: black;
     margin: 0 auto;
