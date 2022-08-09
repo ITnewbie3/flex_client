@@ -1,14 +1,29 @@
 
+@media all and (max-width: 600px){
+    #detailimg{
+    flex-wrap: wrap;
+    }
+
+    .detailtext th{
+
+        font-size: 15px;
+    }
+    .detailtext td{
+        font-size: 15px;
+    }
+}
+
 @media all and (max-width: 768px){
     #detailimg{
     flex-wrap: wrap;
     }
 
     .detailtext th{
+
         font-size: 15px;
     }
     .detailtext td{
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
@@ -56,7 +71,7 @@ max-width: 1600px;
 .detailtext{
     text-align: center;
     width:80%;
-   
+
    
 }
 .detailtext p{
@@ -67,16 +82,19 @@ max-width: 1600px;
 }
 .detailtext table{
     margin-top: 30px;
+    font-size: 22px;
 }
 .detailtext th{
+    padding-bottom: 15px;
     color:white;
     width:40%;
-    font-size: 25px;
+    vertical-align: top;
 }
 .detailtext td{
+    padding-bottom: 15px;
     color:white;
     width:60%;
-    font-size: 22px;
+
 }
 
 

@@ -50,6 +50,7 @@ const Detail = () => {
     e.preventDefault();
     console.log(formData.id);
     inserfavorites();
+    alert("찜하기 되었습니다.")
     document.location.href = `/favorite/${sessionStorage.getItem('user_id')}`
 }
     return (
@@ -81,6 +82,14 @@ const Detail = () => {
                 <div className='detailtext'>
              <p>{data[0].name}</p> 
              <table>
+             <tr>
+                    <td colSpan={2}>
+                    { (sessionStorage.getItem("user_id") && !sessionStorage.getItem("view")) ?
+             <form onSubmit={onSubmit}>
+            <button className='btn' type='submit' >찜하기</button> 
+            </form> : ""}
+                    </td>
+                </tr>
                 <tr>
                     <th>관객수</th>
                     <td>{data[0].attendance}</td>
@@ -101,14 +110,7 @@ const Detail = () => {
                     <th>줄거리</th>
                     <td>{data[0].desc}</td>
                 </tr>
-                <tr>
-                    <td colSpan={2}>
-                    { (sessionStorage.getItem("user_id") && !sessionStorage.getItem("view")) ?
-             <form onSubmit={onSubmit}>
-            <button className='btn' type='submit' >찜하기</button> 
-            </form> : ""}
-                    </td>
-                </tr>
+              
              </table>
              </div>
              </div>
