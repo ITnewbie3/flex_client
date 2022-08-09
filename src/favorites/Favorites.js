@@ -34,7 +34,6 @@ const Favorites = () => {
     const onSubmit = (e)=>{
         e.preventDefault();
         const no = e.target[0].value
-        console.log(no);
         delfavorites(no);
 
     }

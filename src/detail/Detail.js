@@ -43,7 +43,7 @@ const Detail = () => {
    },[data])
    
    if(loading) return <div>로딩중입니다.</div>
-   if(error) return <div>에러..</div>
+   if(error) return <div>에러</div>
    if(!data) return null
  
    const onSubmit = (e)=>{

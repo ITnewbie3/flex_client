@@ -14,13 +14,21 @@ function App() {
     <div className="App">
          <Routes>
       <Route path='/' element={<Home/>} />
+      {/* 시작부 */}
       <Route path='/main' element={<Main/>} />
+      {/* 메인 */}
       <Route path='/detail/:id' element={<Detail/>} />
+      {/* 상세보기　페이지 */}
       <Route path='/inser' element={<InsertMovie/>} />
+      {/* 영화등록　페이지 */}
       <Route path='/allmovie' element={<Allmovie/>} />
+      {/* 전체보기　페이지 */}
       <Route path='/join' element={<Join/>} />
+      {/* 회원가입　페이지 */}
       <Route path='/favorite/:id' element={<Favorites/>} />
+      {/* 찜하기　페이지 */}
       <Route path='/best/:keyword' element={<Bestmovie />} />
+      {/* 인기목록　페이지 */}
       </Routes>
     </div>
   );
