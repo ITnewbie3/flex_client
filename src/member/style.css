@@ -21,6 +21,7 @@
     margin-bottom: 15px;
     height:50px;
     color:white;
+    vertical-align: top;
 }
 #insertform #phon > input {
     width:10%;
@@ -52,3 +53,8 @@
     margin-right: 20px;
 }
 
+#insertform table #checkbtn{
+    width:100px;
+    margin: 0;
+    margin-right: 0;
+}
