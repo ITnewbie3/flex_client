@@ -7,6 +7,7 @@ import Header from '../include/Header';
 import './style.css'
 import Loading from '../loading/Loading';
 import { API_URL } from '../config/amuguna';
+import Fade from 'react-reveal/Fade'; // 페이드
 
 const Allmovie = () => {
       const { data, loading, error } = useSelector(state => state.searchmovies.movies);
@@ -26,11 +27,13 @@ const Allmovie = () => {
              <Header/>
             <div id='movierun'>
             {data.map(movie =>( 
-
+              <Fade bottom>
                  <Link to={`/detail/${movie.no}`}><div className='movediv'>
                  <img src={`${API_URL}/img/${movie.img[0]}`} alt=''/>
                 </div> 
-                </Link>))}
+                </Link>
+                </Fade>
+                ))}
                 </div>
                 </div>
         </>

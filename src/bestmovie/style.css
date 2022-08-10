@@ -15,15 +15,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.react-reveal{
+    width:30%;
+    margin-bottom: 50px;
+}
 #movierun a{
     width:30%;
     margin-bottom: 50px;
 }
-#movierun .movediv {
+.movediv {
     width:100%;
     height:100%;
 
 }
-#movierun .movediv img{
+.movediv img{
     width:100%;
+    height:100%;
 }

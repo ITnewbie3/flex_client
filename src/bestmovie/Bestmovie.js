@@ -7,6 +7,7 @@ import './style.css'
 import Header from '../include/Header';
 import Loading from '../loading/Loading';
 import { API_URL } from '../config/amuguna';
+import Fade from 'react-reveal/Fade';
 
 const Bestmovie = () => {
     const params = useParams();
@@ -26,11 +27,13 @@ const Bestmovie = () => {
              <Header/>
             <div id='movierun'>
             {data.map(movie =>( 
-
+              <Fade bottom>
                  <Link to={`/detail/${movie.no}`}><div className='movediv'>
                  <img src={`${API_URL}/img/${movie.img[0]}`} alt=''/>
-                </div> 
-                </Link>           ))}
+                </div>
+                </Link>
+                </Fade> 
+                           ))}
                 </div>
                 </div>
         </>
