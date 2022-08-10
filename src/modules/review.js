@@ -20,7 +20,7 @@ const GET_REVIEW_ERROR = "GET_REVIEW_ERROR"
 export const getreview = (name) => async dispatch => {
     dispatch({type:GET_REVIEW})
     try{
-        const response = await axios.get(`${API_URL}}/review/${name}`)
+        const response = await axios.get(`${API_URL}/review/${name}`)
         const result = response.data;
         dispatch({type:GET_REVIEW_SUCCESS,result})
     }
