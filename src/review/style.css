@@ -1,0 +1,93 @@
+
+#reviewinput{
+    max-width: 1600px;
+    margin: 50px auto;
+
+}
+#reviewinput div {
+    color:white;
+}
+#reviewinput ul p{
+    font-size: 20px;
+    color:white;
+}
+#reviewinput > p {
+    padding-left: 10px;
+    color:white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+#reviewinput ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#reviewinput ul li:nth-child(1){
+    padding-left: 10px;
+    width:10%;
+}
+#reviewinput ul li:nth-child(2){
+    width:75%;
+}
+#reviewinput ul li:nth-child(3){
+    width:10%;
+}
+#reviewinput textarea{
+    width:80%;
+    height:80px;
+    font-size: 20px;
+}
+#reviewinput button{
+    padding:5px;
+    width:80%;
+    height:80px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+#review{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+#review div {
+    color:white;
+}
+#review ul p{
+    font-size: 20px;
+    color:white;
+}
+#review > p {
+    padding-left: 10px;
+    color:white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+#review ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#review ul li {
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+#review ul li:nth-child(1){
+    padding-left: 10px;
+    width:10%;
+    border-right: 1px solid #ccc;
+}
+#review ul li:nth-child(2){
+    width:80%;
+    padding-left: 15px;
+}
+#review ul li:nth-child(3){
+    width:10%;
+}
+#review button{
+    padding:5px;
+    width:80%;
+    height:40px;
+    font-size: 20px;
+    cursor: pointer;
+}

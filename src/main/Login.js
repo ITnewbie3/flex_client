@@ -20,7 +20,7 @@ const onChange = (e) => {
 function login(){
     axios.post(`${API_URL}/member`,formData)
     .then(result=>{
-        const {id, pw} = result.data
+        const {id, pw,mname} = result.data
         if(result.data.id === undefined){
             // id 를 입력하지 않거나 틀린경우
             // console.log(result.data.id === undefined)
@@ -32,6 +32,7 @@ function login(){
         } else if(id === formData.id) {
             // id, pw 모두 일치 
             sessionStorage.setItem('user_id', id)
+            sessionStorage.setItem('nicname', mname)
             document.location.href = '/main'
         // 작업 완료 되면 페이지 이동(새로고침)
         }

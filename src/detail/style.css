@@ -41,7 +41,7 @@
 
 #blindbox{
 width:100%;
-min-height: 100vh;
+min-height: 90vh;
 max-width: 1600px;
     background: black;
     margin: 0 auto;
@@ -66,7 +66,7 @@ max-width: 1600px;
 }
 #detailimg img{
     width:100%;
-    height:100%;
+    height:80%;
 }
 .detailtext{
     text-align: center;
@@ -100,7 +100,7 @@ max-width: 1600px;
 
 /* swiper css 수정하기 */
 #detailimg .swiper { height:60%;
-    width:70%;
+    width:50%;
     margin-right: 50px;
     overflow: hidden;
 }

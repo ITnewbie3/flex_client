@@ -9,6 +9,7 @@ import "swiper/css"; //basic
 import './style.css'
 import axios from 'axios';
 import { API_URL } from '../config/amuguna';
+import Review from '../review/Review';
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const Detail = () => {
@@ -115,7 +116,7 @@ const Detail = () => {
              </div>
              </div>
             </div>
-    
+                  <Review moviedata={data}/>
         </>
     );
 };
