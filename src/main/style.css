@@ -129,6 +129,8 @@ padding-bottom: 30px;
 #loginbox input{
     margin-left: 15px;
     width:50%;
+    font-size: 14px;
+    padding-left: 10px;
     line-height: 30px;
     background: none;
     border: none;

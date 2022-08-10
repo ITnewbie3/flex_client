@@ -30,7 +30,7 @@ const Join = () => {
     const regEma = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
     const regExp = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
     const phon = `${formData.phone1}-${formData.phone2}-${formData.phone3}`
-    const boxcheck = (formData.id.length > 3 && formData.id.length < 9 && formData.name.length > 3 && formData.name.length < 9)
+    const boxcheck = (formData.id.length > 1 && formData.id.length < 9 && formData.name.length > 1 && formData.name.length < 9)
 
 
     function insertMember(){
@@ -48,7 +48,9 @@ const Join = () => {
     function checkMember(){
         axios.get(`${API_URL}/checkmember/${formData.id}`)
         .then(result=>{
-            if(result.data.length === 0){
+            if(!(formData.id.length > 1 && formData.id.length < 9)){
+                alert('id는 2글자이상 8글자 이하로 입력해주세요')
+            }else if(result.data.length === 0){
                 alert('사용가능한 아이디 입니다.')
             } else{
                 alert('이미 존재하는 아이디 입니다.')
@@ -61,7 +63,7 @@ const Join = () => {
     const onSubmit =(e)=>{
         e.preventDefault();
         if(!boxcheck){
-            alert('id와 name은 3글자이상 8글자 이하로 입력해주세요')
+            alert('id와 name은 2글자이상 8글자 이하로 입력해주세요')
          } else if (!regPw.test(formData.pw)){
              alert('password는 특수문자 1개를 포함한 8글자 이상 입력해주세요.')
          } else if (!regEma.test(formData.email)){
@@ -88,7 +90,7 @@ const Join = () => {
                 <tr>
                     <th>ID</th>
                     <td><input type='text' required onChange={onChange} placeholder='4글자 이상 8글자 이하로 입력' name='id'/>
-                   </td> <button id='checkbtn' onClick={checkMember}>ID중복체크</button>
+                   </td> <span id='checkbtn' onClick={checkMember}>ID중복체크</span>
                 </tr>                <tr>
                     <th>PASSWORD</th>
                     <td><input type='password' required onChange={onChange} placeholder='하나이상의 숫자, 특수문자 포함 입력' name='pw'/></td>
