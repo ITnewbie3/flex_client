@@ -91,3 +91,33 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+@media all and (max-width: 660px){
+
+    #reviewinput ul li:nth-child(1){
+        width:20%;
+    }
+    #reviewinput ul li:nth-child(2){
+        width:60%;
+    }
+    #reviewinput ul li:nth-child(3){
+        width:20%;
+    }
+
+
+    #review ul li:nth-child(1){
+        width:25%;
+        border-right: 1px solid #ccc;
+    }
+    #review ul li:nth-child(2){
+        width:60%;
+
+    }
+    #review ul li:nth-child(3){
+        width:15%;
+    }
+    #reviewinput button{
+    }
+    #review button{
+    }
+}
