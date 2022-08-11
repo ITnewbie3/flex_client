@@ -23,7 +23,7 @@
     top:50%;
     left:-30%;
     width:100%;
-    transform: translate(-50%,-160%);
+    transform: translate(-50%,-50%);
     opacity: 0;
     transition: 2s;
 }
@@ -32,6 +32,6 @@
     height:50%;
 }
 .home.on p {
-    left:80%;
+    left:60%;
     opacity: 1;
 }

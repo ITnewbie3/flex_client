@@ -14,7 +14,7 @@ const navigate = useNavigate();
 useEffect(()=>{
     let timer = setTimeout(()=>{ navigate(`/main`);   }, 5000);
   });
-  // 스타트 완료 후 -> /main 2초후 이동
+//   스타트 완료 후 -> /main 2초후 이동
     return (
         <div className='home'>
             <div className='over'>

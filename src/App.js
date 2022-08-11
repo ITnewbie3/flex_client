@@ -8,23 +8,31 @@ import Allmovie from './allmovie/Allmovie';
 import Bestmovie from './bestmovie/Bestmovie'
 import Join from './member/Join';
 import Favorites from './favorites/Favorites';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 const socket =  io.connect('http://localhost:4001')
 
 function App() {
   const [chat, setChat] = useState([]);
-
+  const divbox = useRef();
   useEffect(() => {
     socket.on("message", ({nicname, message}) => {
      setChat([...chat,{nicname,message}]);
     });
+    if(chat.length>6){
+      deletechat();
+     }
   }, [chat]);
   const [state, setState] = useState({
     nicname : "",
     message : ""
 })
-
+function deletechat() {
+do{
+  let arr = chat.shift()
+  setChat(chat);
+  }while(chat.length > 6); 
+}
   const onChange = (e) => {
     const {name, value} = e.target;
     setState({
@@ -35,14 +43,12 @@ function App() {
 }
 const onMessageSubmit =(e)=>{
   e.preventDefault()
+   console.log(chat.length)
   const {nicname, message} =state
   socket.emit('message',{nicname, message})
   setState({nicname,message : ''})
   e.target.message.value = ""
-  if(chat.length>20){
-    let arr = chat.shift()
-    setChat(chat);
-  }
+
 }
   const [view, setView] = useState(false);
   const onClick = () => {
@@ -56,16 +62,17 @@ const onMessageSubmit =(e)=>{
     <div className="App">
 
         <div id='chatbox' className={view ? "on" : "" }>
-          <button onClick={onClick} id='chatbtn'>채팅창</button>
-          <div id='textbox'>
+          <button onClick={onClick} id='chatbtn'>O<br/>P<br/>E<br/>N</button>
+          <div id='textbox' ref={divbox}>
             {chat.map(chat => (
-             <p className={(sessionStorage.getItem('nicname') === chat.nicname) ? "right" : "" }>{chat.nicname} : {chat.message}</p> 
+             <p className={(sessionStorage.getItem('nicname') === chat.nicname) ? "right" : "left" }>
+              <h2><img src='img/right.png'/></h2><span>{chat.nicname} : {chat.message}</span>
+              </p> 
            ))} 
           </div>
           <form onSubmit={onMessageSubmit}>
           <div id='insertbox'>
-            <p>{sessionStorage.getItem('nicname')}</p>
-            <input name='message' onChange={onChange} type='text' />
+            <input name='message' placeholder='두줄글은 사용하지 말아주세요 죄송합니다..' onChange={onChange} type='text' />
             <button type='submit'>전송</button>
           </div>
           </form>

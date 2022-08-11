@@ -18,7 +18,7 @@
 }
 
 #chatbox{
-  background: wheat;
+  background: white;;
   position: absolute;
   left:-600px;;
   top:200px;
@@ -33,25 +33,73 @@
   top:200px;
   right:-30px;
   width:30px;
-  height:80px;
+  height:90px;
   font-size: 18px;
   z-index: 8;
   border-radius: 20px;
   border: none;
-  background: white;
+  background: #9bbbd4;
 }
 #textbox{
-  border-radius: 10px;
+  overflow: hidden;
+  background: #9bbbd4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   width:100%;
   height:90%;
-  background-color: white;
   font-size: 17px;
   font-weight: normal;
   padding: 10px;
+  padding-top: 25px;
 }
+
 #textbox .right{
   text-align: right;
+  position: relative;
+  height:60px;
+  margin-bottom: 5px;
+}
+#textbox .left {
+  display: flex;
+  height:60px;
+  margin-bottom: 5px;
+}
+#textbox .left span {
+  position:relative;  padding: 20px; 
+  min-width:200px; height:60px; 
+  color: #000; border-radius: 10px; background-color: #fff;
 
+}
+#textbox .left span::after {
+  content:""; position: absolute; top: 21px; 
+  transform:rotate(180deg);
+  left: -10px; border-left: 20px solid #fff; 
+  border-bottom: 10px solid transparent; border-top: 10px solid transparent;
+}
+#textbox .right h2 img{
+  display: none;
+}
+#textbox .right span{
+  position:relative;  padding: 20px; 
+  min-width:200px; height:60px; 
+  color: #000; border-radius: 10px; background-color: #fff;
+}
+#textbox .right span::after{
+  content:""; position: absolute; top: 21px; 
+  right: -10px; border-left: 10px solid #fff; 
+  border-bottom: 10px solid transparent; border-top: 10px solid transparent;
+}
+#textbox p h2{
+  display: block;
+  width:10%;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 5px;
+}
+#textbox p h2 img{
+  width:100%;
+  height:100%;
+  
 }
 #insertbox{
   width:100%;
@@ -61,10 +109,12 @@
   padding: 0 20px;
 }
 #insertbox input{
-  width:70%;
+  outline: none;
+  width:89%;
   height:50px;
   margin-top: 5px;
   font-size: 20px;
+  border: none;
 }
 #insertbox button{
   width:10%;
@@ -78,7 +128,7 @@
 @media all and (max-width: 660px){
 
   #chatbox{
-    background: wheat;
+
     position: absolute;
     left:-300px;;
     top:200px;
@@ -88,7 +138,7 @@
     z-index: 20;
     border-radius: 10px;
   }
-  #insertbox p{
+  #insertbox span{
     font-size: 12px;
   }
   #insertbox input{
@@ -104,12 +154,35 @@
   }
 
   #textbox{
-    border-radius: 10px;
+
     width:100%;
     height:90%;
-    background-color: white;
+
     font-size: 12px;
     font-weight: normal;
     padding: 10px;
+  }
+  #textbox .left{
+    height:40px;
+  }
+  #textbox .right{
+    height:40px;
+
+  }
+  #textbox .left span {
+    min-width: 100px;
+    padding: 13px;
+    height:40px;
+  }
+  #textbox .left span::after {
+    top:10px;
+  }
+  #textbox .right span::after{
+    top:10px;
+  }
+  #textbox .right span{
+    min-width: 100px;
+    height:40px;
+    padding: 13px;
   }
 }
