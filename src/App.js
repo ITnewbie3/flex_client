@@ -10,8 +10,8 @@ import Join from './member/Join';
 import Favorites from './favorites/Favorites';
 import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
-import { API_URL } from './config/amuguna';
-const socket =  io.connect(`${API_URL}`)
+import { API_URL2 } from './config/amuguna';
+const socket =  io.connect(`${API_URL2}`)
 
 function App() {
   const [chat, setChat] = useState([]);
