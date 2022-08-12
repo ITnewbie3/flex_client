@@ -18,15 +18,10 @@ const Allmovie = () => {
 
       const onClick =(e)=>{
        setSerchsns(e.target.innerText)
-
-     
       }
       if(loading) return <Loading/>
       if(error) return <div>에러..</div>
       if(!data) return null
-      console.log(data)
-      // console.log(data[20].sns.includes('인기'))
-
       return (
         <>
            <div id='allmovie'>
@@ -53,7 +48,6 @@ const Allmovie = () => {
                 ))}
                 </>
                : <> 
-         {/* data && console.log(data[0].sns.includes(serchsns)) */}
                {data.map(movie =>( 
                 movie.sns.includes(serchsns) ? (
                  <Fade bottom>
