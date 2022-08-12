@@ -16,7 +16,21 @@
     max-width: 1600px;
     margin: 0 auto;
 }
-
+#menu{
+    color:white;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 70px;
+}
+#menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+#menu li{
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+}
 #movierun{
     padding-top: 70px;
     width:90%;

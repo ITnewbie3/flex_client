@@ -55,7 +55,7 @@ const onMessageSubmit =(e)=>{
   const onClick = () => {
     if(view){
     setView(false)
-    document.querySelector('#chatbtn').innerHTML = 'O<br/>P<br/>E<br/>N'
+    document.querySelector('#chatbtn').innerHTML = '실시간채팅'
   }else{
     setView(true);
     document.querySelector('#chatbtn').innerHTML = 'C<br/>L<br/>O<br/>S<br/>E'
@@ -65,7 +65,7 @@ const onMessageSubmit =(e)=>{
     <div className="App">
       {sessionStorage.getItem('user_id') ? 
         <div id='chatbox' className={view ? "on" : "" }>
-          <button onClick={onClick} id='chatbtn'>O<br/>P<br/>E<br/>N</button>
+          <button onClick={onClick} id='chatbtn'>실시간채팅</button>
          
           <div id='textbox' ref={divbox}>
             {chat.map(chat => (

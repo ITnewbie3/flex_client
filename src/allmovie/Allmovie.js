@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import {  getmovies } from '../modules/movies';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -15,17 +14,35 @@ const Allmovie = () => {
       useEffect(()=>{
           dispatch(getmovies())
       },[dispatch])
+      const [serchsns, setSerchsns] = useState("전체")
 
+      const onClick =(e)=>{
+       setSerchsns(e.target.innerText)
 
+     
+      }
       if(loading) return <Loading/>
       if(error) return <div>에러..</div>
       if(!data) return null
       console.log(data)
+      // console.log(data[20].sns.includes('인기'))
+
       return (
         <>
            <div id='allmovie'>
              <Header/>
+             <div id='menu'>
+              <ul>
+                <li onClick={onClick}>전체</li>
+                <li onClick={onClick}>액션</li>
+                <li onClick={onClick}>드라마</li>
+                <li onClick={onClick}>로맨스</li>
+                <li onClick={onClick}>판타지</li>
+              </ul>
+             </div>
             <div id='movierun'>
+          {serchsns === '전체' ?
+          <> 
             {data.map(movie =>( 
               <Fade bottom>
                  <Link to={`/detail/${movie.no}`}><div className='movediv'>
@@ -34,6 +51,19 @@ const Allmovie = () => {
                 </Link>
                 </Fade>
                 ))}
+                </>
+               : <> 
+         {/* data && console.log(data[0].sns.includes(serchsns)) */}
+               {data.map(movie =>( 
+                movie.sns.includes(serchsns) ? (
+                 <Fade bottom>
+                    <Link to={`/detail/${movie.no}`}><div className='movediv'>
+                    <img src={`${API_URL}/img/${movie.img[0]}`} alt=''/>
+                   </div> 
+                   </Link>
+                   </Fade> ) : ""
+                   ))}
+                   </>}
                 </div>
                 </div>
         </>
