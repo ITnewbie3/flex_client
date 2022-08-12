@@ -61,9 +61,10 @@ const onMessageSubmit =(e)=>{
   }
   return (
     <div className="App">
-
+      {sessionStorage.getItem('user_id') ? 
         <div id='chatbox' className={view ? "on" : "" }>
           <button onClick={onClick} id='chatbtn'>O<br/>P<br/>E<br/>N</button>
+         
           <div id='textbox' ref={divbox}>
             {chat.map(chat => (
              <p className={(sessionStorage.getItem('nicname') === chat.nicname) ? "right" : "left" }>
@@ -78,6 +79,7 @@ const onMessageSubmit =(e)=>{
           </div>
           </form>
         </div>
+         : "" }
   
          <Routes>
       <Route path='/' element={<Home/>} />

@@ -101,8 +101,7 @@
     min-width: 540px;
 }
 #loginbox img{
-    width:80%;
-    height:80%;
+    width:60%;
     margin-bottom: 40px;
 }
 #loginbox p{
@@ -171,7 +170,6 @@ padding-bottom: 30px;
     }
     #loginbox img{
         width:40%;
-        height:30%;
     }
     #bgbox{
         width:100%;
