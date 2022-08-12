@@ -16,7 +16,9 @@
 #chatbox.on{
   left:0;
 }
-
+#chatbox.on #chatbtn{
+  height:110px
+}
 #chatbox{
   background: white;;
   position: absolute;

@@ -55,8 +55,10 @@ const onMessageSubmit =(e)=>{
   const onClick = () => {
     if(view){
     setView(false)
+    document.querySelector('#chatbtn').innerHTML = 'O<br/>P<br/>E<br/>N'
   }else{
     setView(true);
+    document.querySelector('#chatbtn').innerHTML = 'C<br/>L<br/>O<br/>S<br/>E'
   }
   }
   return (
