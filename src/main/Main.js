@@ -17,9 +17,9 @@ const Main = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
           setIsLoading(false);
-        }, 1500);
+        }, 800);
         return () => clearTimeout(timer);
-      }, []); // 2초 후 로딩완료
+      }, []); // 로딩완료
     return (
         <>
             {isloading ?  <Loading/> : 
